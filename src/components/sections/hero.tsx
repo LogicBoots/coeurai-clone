@@ -9,6 +9,7 @@ import TextType from "../ui/TextType";
 import Prism from "../ui/Prism";
 import LogoCarousel from "../ui/LogoCarousel";
 import Link from "next/link";
+import FloatingLines from "../FloatingLines";
 
 export default function HeroSection() {
   const logos = [
@@ -35,19 +36,23 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex items-center justify-center text-center overflow-hidden min-h-[700px] py-12">
+    <section className="relative flex items-center justify-center text-center overflow-hidden min-h-screen py-12">
       <div className="absolute inset-0 z-0">
-        <Prism
-          animationType="rotate"
-          timeScale={0.5}
-          height={3.5}
-          baseWidth={5.5}
-          scale={3.6}
-          hueShift={0}
-          colorFrequency={1}
-          noise={0.2}
-          glow={1}
-        />
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <FloatingLines
+            enabledWaves={["top", "middle", "bottom"]}
+            // Array - specify line count per wave; Number - same count for all waves
+
+            lineCount={[10, 4, 20]}
+            // Array - specify line distance per wave; Number - same distance for all waves
+
+            lineDistance={[18, 23, 14]}
+            bendRadius={1.0}
+            bendStrength={-12}
+            interactive={true}
+            parallax={true}
+          />
+        </div>
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center">
@@ -65,7 +70,7 @@ export default function HeroSection() {
           </FadeIn>
           <FadeIn delay={200}>
             <p className="mt-6 max-w-2xl mx-auto text-lg text-white md:text-xl">
-              Coeur AI revolutionizes cardiac monitoring with cutting-edge
+              AI Stethoscope revolutionizes cardiac monitoring with cutting-edge
               artificial intelligence, providing life-saving insights for
               clinicians and patients.
             </p>

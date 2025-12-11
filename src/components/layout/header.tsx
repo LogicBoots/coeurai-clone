@@ -26,12 +26,7 @@ export default function Header() {
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/20 backdrop-blur-lg border-b border-border"
-          : "bg-transparent"
-      }`}>
+    <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-black/10 backdrop-blur-md border-b border-border/20">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link
           href="/"
@@ -44,7 +39,7 @@ export default function Header() {
               alt="Coeur AI Logo"
             />
           </div>
-          <span className="text-xl font-bold text-foreground">Coeur AI</span>
+          <span className="text-xl font-bold text-foreground">AI Stethoscope</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -77,7 +72,7 @@ export default function Header() {
                     className="flex items-center gap-2"
                     onClick={() => setIsMobileMenuOpen(false)}>
                     <CoeurAILogo className="h-8 w-8 text-primary" />
-                    <span className="text-xl font-bold">Coeur AI</span>
+                    <span className="text-xl font-bold">AI Stethoscope</span>
                   </Link>
                 </div>
                 <nav className="mt-10 flex flex-col gap-6">

@@ -3,9 +3,9 @@ import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-card border-t py-12">
+    <footer id="contact" className="bg-card border-t py-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           <div className="space-y-4">
             <Link
               href="/"
@@ -18,22 +18,11 @@ export default function Footer() {
                   alt="Coeur AI Logo"
                 />
               </div>
-              <span className="text-xl font-bold">Coeur AI</span>
+              <span className="text-xl font-bold">AI Stethoscope</span>
             </Link>
             <p className="text-muted-foreground">
               The future of proactive cardiac care.
             </p>
-            <div className="flex gap-2">
-              <p className="mt-1 text-muted-foreground">A product of</p>
-              <span className="mt-1">LogicBoots</span>
-              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center">
-                <img
-                  src="/logo-s.jpg"
-                  className="h-7 w-7 object-contain"
-                  alt="LogicBoots Logo"
-                />
-              </div>
-            </div>
           </div>
           <div className="lg:col-span-2 grid gap-8 sm:grid-cols-3">
             <div>
@@ -102,11 +91,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} LogicBoots Private Limited. All
-            rights reserved.
-          </p>
+        <div className="mt-6 border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex gap-4">
             <Link
               href="https://www.linkedin.com/showcase/coeurai"
